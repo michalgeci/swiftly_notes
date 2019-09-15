@@ -7,28 +7,59 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		320A0F0E232B1F8A0044F075 /* SwipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320A0F0D232B1F8A0044F075 /* SwipeCell.swift */; };
 		3215419823284E1A001CA18D /* RestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3215419723284E1A001CA18D /* RestAPI.swift */; };
 		3215419B23285E1D001CA18D /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3215419A23285E1D001CA18D /* NoteModel.swift */; };
+		321541B12329BA14001CA18D /* Swiftly_NotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321541B02329BA14001CA18D /* Swiftly_NotesTests.swift */; };
 		3261341E232840B700C85FA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3261341D232840B700C85FA4 /* AppDelegate.swift */; };
-		32613420232840B700C85FA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3261341F232840B700C85FA4 /* ViewController.swift */; };
+		32613420232840B700C85FA4 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3261341F232840B700C85FA4 /* MainVC.swift */; };
 		32613423232840B700C85FA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32613421232840B700C85FA4 /* Main.storyboard */; };
 		32613425232840B800C85FA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32613424232840B800C85FA4 /* Assets.xcassets */; };
 		32613428232840B800C85FA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32613426232840B800C85FA4 /* LaunchScreen.storyboard */; };
+		32CD2EF2232C49A800BF2573 /* RestAPI+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CD2EF1232C49A800BF2573 /* RestAPI+Extension.swift */; };
+		32CD2EF4232C62FC00BF2573 /* MainVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CD2EF3232C62FC00BF2573 /* MainVC+TableView.swift */; };
+		32CD2EF6232C658600BF2573 /* NoteDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CD2EF5232C658600BF2573 /* NoteDetailVC.swift */; };
+		32D78147232E63650047C743 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D78146232E63650047C743 /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		321541B32329BA14001CA18D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 32613412232840B600C85FA4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 32613419232840B700C85FA4;
+			remoteInfo = "Swiftly Notes";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		320A0F0D232B1F8A0044F075 /* SwipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCell.swift; sourceTree = "<group>"; };
 		3215419723284E1A001CA18D /* RestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPI.swift; sourceTree = "<group>"; };
 		3215419A23285E1D001CA18D /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
+		321541AE2329BA14001CA18D /* Swiftly NotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swiftly NotesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		321541B02329BA14001CA18D /* Swiftly_NotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swiftly_NotesTests.swift; sourceTree = "<group>"; };
+		321541B22329BA14001CA18D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3261341A232840B700C85FA4 /* Swiftly Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swiftly Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3261341D232840B700C85FA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3261341F232840B700C85FA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3261341F232840B700C85FA4 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		32613422232840B700C85FA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		32613424232840B800C85FA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32613427232840B800C85FA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32613429232840B800C85FA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32CD2EF1232C49A800BF2573 /* RestAPI+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RestAPI+Extension.swift"; sourceTree = "<group>"; };
+		32CD2EF3232C62FC00BF2573 /* MainVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+TableView.swift"; sourceTree = "<group>"; };
+		32CD2EF5232C658600BF2573 /* NoteDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailVC.swift; sourceTree = "<group>"; };
+		32D78146232E63650047C743 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		321541AB2329BA14001CA18D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		32613417232840B700C85FA4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -47,10 +78,20 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		321541AF2329BA14001CA18D /* Swiftly NotesTests */ = {
+			isa = PBXGroup;
+			children = (
+				321541B02329BA14001CA18D /* Swiftly_NotesTests.swift */,
+				321541B22329BA14001CA18D /* Info.plist */,
+			);
+			path = "Swiftly NotesTests";
+			sourceTree = "<group>";
+		};
 		32613411232840B600C85FA4 = {
 			isa = PBXGroup;
 			children = (
 				3261341C232840B700C85FA4 /* Swiftly Notes */,
+				321541AF2329BA14001CA18D /* Swiftly NotesTests */,
 				3261341B232840B700C85FA4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				3261341A232840B700C85FA4 /* Swiftly Notes.app */,
+				321541AE2329BA14001CA18D /* Swiftly NotesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,9 +108,10 @@
 		3261341C232840B700C85FA4 /* Swiftly Notes */ = {
 			isa = PBXGroup;
 			children = (
+				32CD2EF7232E62D800BF2573 /* Extensions */,
+				32CD2EEE232C107700BF2573 /* Features */,
 				32613431232849E200C85FA4 /* Networking */,
 				3261341D232840B700C85FA4 /* AppDelegate.swift */,
-				3261341F232840B700C85FA4 /* ViewController.swift */,
 				32613421232840B700C85FA4 /* Main.storyboard */,
 				32613424232840B800C85FA4 /* Assets.xcassets */,
 				32613426232840B800C85FA4 /* LaunchScreen.storyboard */,
@@ -82,13 +125,67 @@
 			children = (
 				3215419923285DA2001CA18D /* Models */,
 				3215419723284E1A001CA18D /* RestAPI.swift */,
+				32CD2EF1232C49A800BF2573 /* RestAPI+Extension.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		32CD2EEE232C107700BF2573 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				32CD2EEF232C107F00BF2573 /* Main screen */,
+				32CD2EF0232C109000BF2573 /* Note detail */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		32CD2EEF232C107F00BF2573 /* Main screen */ = {
+			isa = PBXGroup;
+			children = (
+				3261341F232840B700C85FA4 /* MainVC.swift */,
+				32CD2EF3232C62FC00BF2573 /* MainVC+TableView.swift */,
+				320A0F0D232B1F8A0044F075 /* SwipeCell.swift */,
+			);
+			path = "Main screen";
+			sourceTree = "<group>";
+		};
+		32CD2EF0232C109000BF2573 /* Note detail */ = {
+			isa = PBXGroup;
+			children = (
+				32CD2EF5232C658600BF2573 /* NoteDetailVC.swift */,
+			);
+			path = "Note detail";
+			sourceTree = "<group>";
+		};
+		32CD2EF7232E62D800BF2573 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				32D78146232E63650047C743 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		321541AD2329BA14001CA18D /* Swiftly NotesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 321541B52329BA14001CA18D /* Build configuration list for PBXNativeTarget "Swiftly NotesTests" */;
+			buildPhases = (
+				321541AA2329BA14001CA18D /* Sources */,
+				321541AB2329BA14001CA18D /* Frameworks */,
+				321541AC2329BA14001CA18D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				321541B42329BA14001CA18D /* PBXTargetDependency */,
+			);
+			name = "Swiftly NotesTests";
+			productName = "Swiftly NotesTests";
+			productReference = 321541AE2329BA14001CA18D /* Swiftly NotesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		32613419232840B700C85FA4 /* Swiftly Notes */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3261342C232840B800C85FA4 /* Build configuration list for PBXNativeTarget "Swiftly Notes" */;
@@ -116,6 +213,10 @@
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Michal Géci";
 				TargetAttributes = {
+					321541AD2329BA14001CA18D = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 32613419232840B700C85FA4;
+					};
 					32613419232840B700C85FA4 = {
 						CreatedOnToolsVersion = 10.3;
 					};
@@ -135,11 +236,19 @@
 			projectRoot = "";
 			targets = (
 				32613419232840B700C85FA4 /* Swiftly Notes */,
+				321541AD2329BA14001CA18D /* Swiftly NotesTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		321541AC2329BA14001CA18D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		32613418232840B700C85FA4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -153,18 +262,39 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		321541AA2329BA14001CA18D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				321541B12329BA14001CA18D /* Swiftly_NotesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		32613416232840B700C85FA4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32613420232840B700C85FA4 /* ViewController.swift in Sources */,
+				32D78147232E63650047C743 /* UIViewController+Extension.swift in Sources */,
+				32CD2EF4232C62FC00BF2573 /* MainVC+TableView.swift in Sources */,
+				32613420232840B700C85FA4 /* MainVC.swift in Sources */,
 				3215419B23285E1D001CA18D /* NoteModel.swift in Sources */,
+				320A0F0E232B1F8A0044F075 /* SwipeCell.swift in Sources */,
 				3261341E232840B700C85FA4 /* AppDelegate.swift in Sources */,
+				32CD2EF2232C49A800BF2573 /* RestAPI+Extension.swift in Sources */,
 				3215419823284E1A001CA18D /* RestAPI.swift in Sources */,
+				32CD2EF6232C658600BF2573 /* NoteDetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		321541B42329BA14001CA18D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 32613419232840B700C85FA4 /* Swiftly Notes */;
+			targetProxy = 321541B32329BA14001CA18D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		32613421232840B700C85FA4 /* Main.storyboard */ = {
@@ -186,6 +316,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		321541B62329BA14001CA18D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HX4HR49YWB;
+				INFOPLIST_FILE = "Swiftly NotesTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Michal-Geci.Swiftly-NotesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swiftly Notes.app/Swiftly Notes";
+			};
+			name = Debug;
+		};
+		321541B72329BA14001CA18D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HX4HR49YWB;
+				INFOPLIST_FILE = "Swiftly NotesTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Michal-Geci.Swiftly-NotesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swiftly Notes.app/Swiftly Notes";
+			};
+			name = Release;
+		};
 		3261342A232840B800C85FA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -341,6 +511,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		321541B52329BA14001CA18D /* Build configuration list for PBXNativeTarget "Swiftly NotesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				321541B62329BA14001CA18D /* Debug */,
+				321541B72329BA14001CA18D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		32613415232840B600C85FA4 /* Build configuration list for PBXProject "Swiftly Notes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
