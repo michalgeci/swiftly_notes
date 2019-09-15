@@ -13,7 +13,8 @@ class RestAPI {
     // MARK: - Common
     
     /** Base url for requests */
-    static let BASE_URL = "http://localhost:8080"
+    static let BASE_URL = "https://swiftly-notes.herokuapp.com"
+    //"http://localhost:8080"
     //"https://private-9aad-note10.apiary-mock.com"
     //"https://private-c855e-note10.apiary-mock.com"
     
