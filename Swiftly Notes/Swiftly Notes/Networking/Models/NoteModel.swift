@@ -8,12 +8,7 @@
 
 import Foundation
 
-struct NoteModel {
-    let id: Int
-    let title: String
-    
-    init(id: Int, title: String) {
-        self.id = id
-        self.title = title
-    }
+struct NoteModel: Codable {
+    let id: Int?
+    let title: String?
 }

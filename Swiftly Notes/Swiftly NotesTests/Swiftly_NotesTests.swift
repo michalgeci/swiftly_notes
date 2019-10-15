@@ -11,16 +11,39 @@ import XCTest
 
 class Swiftly_NotesTests: XCTestCase {
 
-    func testMapping() {
-        let id = 0
-        let title = ""
+    func testNoteMapping1() {
+        let id: Int? = 0
+        let title: String? = ""
         
-        let dict: [String: Any] = ["id": id, "title": title]
+        checkMapping(id: id, title: title)
+    }
+    
+    func testNoteMapping2() {
+        let id: Int? = nil
+        let title: String? = ""
+        
+        checkMapping(id: id, title: title)
+    }
+    
+    func testNoteMapping3() {
+        let id: Int? = 0
+        let title: String? = nil
+        
+        checkMapping(id: id, title: title)
+    }
+    
+    func checkMapping(id: Int?, title: String?) {
+        let note = NoteModel(id: id, title: title)
         
         do {
-            let model = try RestAPI.mapDictToNoteModel(dict: dict)
-            XCTAssertEqual(model?.id, id, "Wrong ID in model")
-            XCTAssertEqual(model?.title, title, "Wrong title in model")
+            let data = RestAPI.createJSONData(from: note)
+            guard let dataU = data else {
+                XCTFail("Failed durnig encoding data")
+                return
+            }
+            let mappedNote = try JSONDecoder().decode(NoteModel.self, from: dataU)
+            XCTAssertEqual(mappedNote.id, id, "Wrong ID in model")
+            XCTAssertEqual(mappedNote.title, title, "Wrong title in model")
         } catch {
             XCTFail("Mapping failed")
         }

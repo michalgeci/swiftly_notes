@@ -15,8 +15,6 @@ class RestAPI {
     /** Base url for requests */
     static let BASE_URL = "https://swiftly-notes.herokuapp.com"
     //"http://localhost:8080"
-    //"https://private-9aad-note10.apiary-mock.com"
-    //"https://private-c855e-note10.apiary-mock.com"
     
     /** Http methods */
     enum HttpMethod: String {
@@ -31,10 +29,10 @@ class RestAPI {
     static let mappingError = NSError(domain: "Error During mapping", code: 2, userInfo: nil)
     
     
-    // MARK: Help functions
+    // MARK: - Help functions
     
     /** Base request used for api, maps JSON response */
-    static func baseRequest(method: HttpMethod, url: String, body: Data? = nil, expectResponseBody: Bool = true, headers: [String:String]? = nil, completion: @escaping (_ jsonData: Any?, _ error: Error?) -> Void ) {
+    static func baseRequest(method: HttpMethod, url: String, body: Data? = nil, expectResponseBody: Bool = true, headers: [String:String]? = nil, completion: @escaping (_ jsonData: Data?, _ error: Error?) -> Void ) {
         
         guard let url = URL(string: url) else {
             print("Could not create url.")
@@ -51,8 +49,11 @@ class RestAPI {
             
             #if DEBUG
             // Print data for debugging purposes
-            print(response ?? "Error while printing response")
-            print(String(data: data ?? Data(), encoding: .utf8) ?? "Error while printing data")
+            let requestStr = "\(method.rawValue) \(request)"
+            let body = body != nil ? String(data: body!, encoding: .utf8) ?? "Empty Body" : "Empty Body"
+            let responseDataStr = String(data: data ?? Data(), encoding: .utf8) ?? "Error while printing data"
+            let debugString = "\n\n----------\nREST CALL BEGIN\n\(requestStr)\n\(body)\n\(responseDataStr)\nREST CALL END\n----------\n\n"
+            print(debugString)
             #endif
             
             if let error = error {
@@ -60,63 +61,25 @@ class RestAPI {
             }
             
             if expectResponseBody {
-                do {
-                    guard let data = data else {
-                        print("NO DATA TO PARSE")
-                        return
-                    }
-                    let json = try JSONSerialization.jsonObject(with: data, options: [])
-                    completion(json, nil)
-                } catch {
-                    completion(nil, jsonError)
+                guard let data = data else {
+                    print("NO DATA TO PARSE")
+                    return
                 }
+                completion(data, nil)
             } else {
                 completion(nil, nil)
             }
         }
         task.resume()
     }
-    
-    
-    /** Map dictionary to NoteModel */
-    static func mapDictToNoteModel(dict: [String: Any]) throws -> NoteModel? {
-        var id: Int?
-        var title: String?
-        do {
-            guard let _id = dict["id"] as? Int else {
-                throw mappingError
-            }
-            guard let _title = dict["title"] as? String else {
-                throw mappingError
-            }
-            
-            id = _id
-            title = _title
-        }
-        
-        if let id = id, let title = title {
-            return NoteModel(id: id, title: title)
-        }
-        
-        return nil
-    }
-    
+
     /** Create JSON Data object */
-    static func createJsonDataObject(obj: Any) -> Data? {
-        var body: Data?
+    static func createJSONData<T: Codable>(from: T) -> Data? {
         do {
-            body = try JSONSerialization.data(withJSONObject: obj, options: [])
-            return body
+            let data = try JSONEncoder().encode(from)
+            return data
         } catch {
             return nil
         }
     }
-    
-    
-    /** Create body of note for request */
-    static func createNoteBody(text: String) -> Data? {
-        let dictBody = ["title": text]
-        return createJsonDataObject(obj: dictBody)
-    }
-    
 }

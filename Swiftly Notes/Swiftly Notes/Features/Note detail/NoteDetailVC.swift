@@ -63,11 +63,9 @@ class NoteDetailVC: UIViewController, UITextViewDelegate {
                 }
                 
                 // Update text
-                DispatchQueue.main.async {
-                    self.textView.text = note?.title
-                    self.heightConstraint.constant = self.textView.intrinsicContentSize.height
-                    self.hideLoader()
-                }
+                self.textView.text = note?.title
+                self.heightConstraint.constant = self.textView.intrinsicContentSize.height
+                self.hideLoader()
             }
         }
     }

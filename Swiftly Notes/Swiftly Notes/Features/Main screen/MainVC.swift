@@ -39,13 +39,9 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             // Handle error
             if let error = error {
                 self.notes = []
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
+                self.tableView.reloadData()
                 self.showAlert {
-                    DispatchQueue.main.async {
-                        self.tableView.refreshControl?.endRefreshing()
-                    }
+                    self.tableView.refreshControl?.endRefreshing()
                 }
                 print(error)
                 return
@@ -53,10 +49,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             
             // Fill with data
             self.notes = notes ?? []
-            DispatchQueue.main.async {
-                self.tableView.refreshControl?.endRefreshing()
-                self.tableView.reloadData()
-            }
+            self.tableView.refreshControl?.endRefreshing()
+            self.tableView.reloadData()
         }
     }
     
